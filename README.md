@@ -336,9 +336,3 @@ For Google Gemini: set `GOOGLE_API_KEY` instead.
 - **Multi-agent architecture** — Root agent + Insight agent + MCP server for external collaboration
 - **Security-first** — Input validation, rate limiting, audit logging, injection prevention
 - **Deployable** — Docker, Cloud Run, local development all supported
-
----
-
-## License
-
-MIT
