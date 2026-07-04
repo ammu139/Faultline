@@ -1,0 +1,41 @@
+[project]
+name = "faultline"
+version = "2.0.0"
+description = "System Fragility Intelligence Agent — Predict failures before they cascade"
+requires-python = ">=3.11"
+dependencies = [
+    # Google ADK 2.0
+    "google-adk>=2.0.0",
+
+    # UI & Visualization
+    "streamlit>=1.45.0",
+    "plotly>=6.1.2",
+    "pyvis>=0.3.2",
+    "streamlit-agraph>=0.0.45",
+
+    # Graph & Data
+    "networkx>=3.4.2",
+    "numpy>=2.2.6",
+    "pandas>=2.2.3",
+    "scipy>=1.15.3",
+
+    # LLM (LiteLLM for OpenAI-compatible endpoints)
+    "openai>=1.82.0",
+    "litellm>=1.40.0",
+
+    # Simulation & ML
+    "scikit-learn>=1.6.1",
+
+    # Utilities
+    "pydantic>=2.11.4",
+    "python-dotenv>=1.1.0",
+    "rich>=14.0.0",
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+faultline = "cli:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

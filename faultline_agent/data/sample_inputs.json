@@ -1,0 +1,106 @@
+{
+  "scenarios": {
+    "ecommerce": {
+      "name": "E-Commerce Platform",
+      "description": "Black Friday checkout collapse simulation",
+      "trigger": "Payment gateway timeout during 3x traffic spike",
+      "expected_impact": "Complete checkout failure, cart abandonment surge",
+      "business_context": {
+        "revenue_per_minute": 50000,
+        "peak_tps": 5000,
+        "customer_base": 2000000
+      }
+    },
+    "banking": {
+      "name": "Banking Transaction System",
+      "description": "Fraud detection cascade causing transaction delays",
+      "trigger": "ML model latency spike during coordinated fraud attack",
+      "expected_impact": "Transaction processing delays, potential regulatory breach",
+      "business_context": {
+        "transactions_per_second": 10000,
+        "avg_transaction_value": 500,
+        "regulatory_fine_risk": 1000000
+      }
+    },
+    "cicd": {
+      "name": "Software Ops / CI-CD",
+      "description": "Bad deployment cascading through service mesh",
+      "trigger": "Faulty container image causing service mesh instability",
+      "expected_impact": "Multiple microservices degraded, deployment pipeline blocked",
+      "business_context": {
+        "deployments_per_day": 50,
+        "developer_count": 80,
+        "mttr_target_minutes": 15
+      }
+    }
+  },
+  "external_factors": [
+    {
+      "type": "natural_disaster",
+      "examples": ["Data center flooding", "Power grid failure", "Earthquake"],
+      "probability": "very_low",
+      "impact": "catastrophic"
+    },
+    {
+      "type": "cyber_attack",
+      "examples": ["DDoS attack", "Ransomware", "Supply chain compromise"],
+      "probability": "medium",
+      "impact": "critical"
+    },
+    {
+      "type": "human_error",
+      "examples": ["Misconfiguration", "Wrong deployment", "Accidental deletion"],
+      "probability": "high",
+      "impact": "variable"
+    },
+    {
+      "type": "third_party_outage",
+      "examples": ["Cloud provider issue", "DNS failure", "CDN outage"],
+      "probability": "medium",
+      "impact": "high"
+    },
+    {
+      "type": "capacity_exhaustion",
+      "examples": ["Traffic spike", "Memory leak", "Disk full"],
+      "probability": "high",
+      "impact": "medium"
+    }
+  ],
+  "stress_templates": [
+    {
+      "name": "Black Friday Surge",
+      "stress_type": "load_spike",
+      "intensity": 0.9,
+      "targets": ["frontend", "checkout", "payment"],
+      "duration_minutes": 30
+    },
+    {
+      "name": "Database Failover",
+      "stress_type": "dependency_failure",
+      "intensity": 0.95,
+      "targets": ["primary_db"],
+      "duration_minutes": 5
+    },
+    {
+      "name": "Network Partition",
+      "stress_type": "network_partition",
+      "intensity": 0.8,
+      "targets": ["gateway", "service_mesh"],
+      "duration_minutes": 10
+    },
+    {
+      "name": "Cascading Auth Failure",
+      "stress_type": "dependency_failure",
+      "intensity": 0.85,
+      "targets": ["auth_service"],
+      "duration_minutes": 15
+    },
+    {
+      "name": "External API Outage",
+      "stress_type": "external_outage",
+      "intensity": 0.95,
+      "targets": ["external_apis"],
+      "duration_minutes": 60
+    }
+  ]
+}

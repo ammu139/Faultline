@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="640" height="360" fill="#FFFFFF" rx="8"/>
+  <text x="320" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#202124">FAULTLINE — Architecture</text>
+  <text x="320" y="33" text-anchor="middle" font-size="8" fill="#5F6368">AI-Powered System Resilience Agent • Google ADK 2.0</text>
+
+  <!-- User Query -->
+  <rect x="255" y="40" width="130" height="22" rx="11" fill="#E8F0FE" stroke="#4285F4" stroke-width="1"/>
+  <text x="320" y="55" text-anchor="middle" font-size="9" font-weight="500" fill="#4285F4">User Query</text>
+  <line x1="320" y1="62" x2="320" y2="72" stroke="#4285F4" stroke-width="1.5"/>
+
+  <!-- Root Agent -->
+  <rect x="120" y="74" width="400" height="68" rx="8" fill="#F8F9FA" stroke="#4285F4" stroke-width="1.5"/>
+  <rect x="120" y="74" width="400" height="18" rx="8" fill="#4285F4"/>
+  <text x="320" y="87" text-anchor="middle" font-size="9" font-weight="600" fill="white">root_agent — Autonomous Resilience Engineer (ADK 2.0)</text>
+  <text x="135" y="103" font-size="7.5" fill="#202124">• Plans investigation strategy</text>
+  <text x="135" y="114" font-size="7.5" fill="#202124">• Selects tools based on hypothesis</text>
+  <text x="135" y="125" font-size="7.5" fill="#202124">• Multi-step reasoning</text>
+  <text x="340" y="103" font-size="7.5" fill="#202124">• Generates failure hypotheses</text>
+  <text x="340" y="114" font-size="7.5" fill="#202124">• Synthesizes with evidence</text>
+  <text x="340" y="125" font-size="7.5" fill="#202124">• Confidence scoring</text>
+  <text x="320" y="137" text-anchor="middle" font-size="7" fill="#5F6368">LiteLLM → any OpenAI-compatible endpoint</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="142" x2="320" y2="152" stroke="#5F6368" stroke-width="1.5"/>
+  <text x="330" y="150" font-size="7" fill="#5F6368">15 tools</text>
+
+  <!-- Tool Layer -->
+  <rect x="40" y="155" width="560" height="72" rx="8" fill="#F8F9FA" stroke="#34A853" stroke-width="1.5"/>
+  <rect x="40" y="155" width="560" height="16" rx="8" fill="#34A853"/>
+  <text x="320" y="166" text-anchor="middle" font-size="8" font-weight="600" fill="white">Tool Layer — Agent Decides What to Invoke</text>
+
+  <!-- Tool boxes -->
+  <rect x="55" y="176" width="95" height="44" rx="5" fill="#E8F5E9" stroke="#34A853" stroke-width="0.8"/>
+  <text x="102" y="188" text-anchor="middle" font-size="7.5" font-weight="600" fill="#1B5E20">Explore</text>
+  <text x="102" y="199" text-anchor="middle" font-size="6.5" fill="#2E7D32">find_dependencies</text>
+  <text x="102" y="209" text-anchor="middle" font-size="6.5" fill="#2E7D32">compute_blast_radius</text>
+  <text x="102" y="219" text-anchor="middle" font-size="6.5" fill="#2E7D32">compute_criticality</text>
+
+  <rect x="160" y="176" width="90" height="44" rx="5" fill="#FFF3E0" stroke="#F9AB00" stroke-width="0.8"/>
+  <text x="205" y="188" text-anchor="middle" font-size="7.5" font-weight="600" fill="#E65100">Analyze</text>
+  <text x="205" y="199" text-anchor="middle" font-size="6.5" fill="#EF6C00">find_SPOFs</text>
+  <text x="205" y="209" text-anchor="middle" font-size="6.5" fill="#EF6C00">find_critical_paths</text>
+
+  <rect x="260" y="176" width="105" height="44" rx="5" fill="#FCE4EC" stroke="#EA4335" stroke-width="0.8"/>
+  <text x="312" y="188" text-anchor="middle" font-size="7.5" font-weight="600" fill="#B71C1C">Simulate</text>
+  <text x="312" y="199" text-anchor="middle" font-size="6.5" fill="#C62828">simulate_failure</text>
+  <text x="312" y="209" text-anchor="middle" font-size="6.5" fill="#C62828">monte_carlo_simulate</text>
+  <text x="312" y="219" text-anchor="middle" font-size="6.5" fill="#C62828">compare_scenarios</text>
+
+  <rect x="375" y="176" width="105" height="44" rx="5" fill="#E8EAF6" stroke="#3F51B5" stroke-width="0.8"/>
+  <text x="427" y="188" text-anchor="middle" font-size="7.5" font-weight="600" fill="#1A237E">Optimize</text>
+  <text x="427" y="199" text-anchor="middle" font-size="6.5" fill="#283593">recommend_optimization</text>
+
+  <rect x="490" y="176" width="95" height="44" rx="5" fill="#F3E5F5" stroke="#9C27B0" stroke-width="0.8"/>
+  <text x="537" y="188" text-anchor="middle" font-size="7.5" font-weight="600" fill="#4A148C">Memory</text>
+  <text x="537" y="199" text-anchor="middle" font-size="6.5" fill="#6A1B9A">simulation_history</text>
+  <text x="537" y="209" text-anchor="middle" font-size="6.5" fill="#6A1B9A">get_status</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="227" x2="320" y2="240" stroke="#5F6368" stroke-width="1.5"/>
+
+  <!-- Core Engine -->
+  <rect x="70" y="242" width="500" height="58" rx="8" fill="#F8F9FA" stroke="#5F6368" stroke-width="1.5"/>
+  <rect x="70" y="242" width="500" height="16" rx="8" fill="#5F6368"/>
+  <text x="320" y="253" text-anchor="middle" font-size="8" font-weight="600" fill="white">Core Simulation Engine</text>
+
+  <rect x="85" y="263" width="145" height="30" rx="4" fill="white" stroke="#9AA0A6" stroke-width="0.8"/>
+  <text x="157" y="276" text-anchor="middle" font-size="7.5" font-weight="600" fill="#202124">NetworkX Graph</text>
+  <text x="157" y="287" text-anchor="middle" font-size="6.5" fill="#5F6368">Centrality • PageRank • SPOFs</text>
+
+  <rect x="245" y="263" width="145" height="30" rx="4" fill="white" stroke="#9AA0A6" stroke-width="0.8"/>
+  <text x="317" y="276" text-anchor="middle" font-size="7.5" font-weight="600" fill="#202124">Failure Engine</text>
+  <text x="317" y="287" text-anchor="middle" font-size="6.5" fill="#5F6368">Probabilistic Cascade • Decay</text>
+
+  <rect x="405" y="263" width="150" height="30" rx="4" fill="white" stroke="#9AA0A6" stroke-width="0.8"/>
+  <text x="480" y="276" text-anchor="middle" font-size="7.5" font-weight="600" fill="#202124">Monte Carlo Simulator</text>
+  <text x="480" y="287" text-anchor="middle" font-size="6.5" fill="#5F6368">N iterations • P95 confidence</text>
+
+  <!-- Side boxes -->
+  <!-- MCP -->
+  <rect x="10" y="80" width="95" height="48" rx="6" fill="#FFF8E1" stroke="#F9AB00" stroke-width="1"/>
+  <text x="57" y="96" text-anchor="middle" font-size="7.5" font-weight="600" fill="#E65100">MCP Server</text>
+  <text x="57" y="108" text-anchor="middle" font-size="6.5" fill="#795548">Agent-to-Agent</text>
+  <text x="57" y="119" text-anchor="middle" font-size="6.5" fill="#795548">6 exposed tools</text>
+  <line x1="105" y1="104" x2="120" y2="104" stroke="#F9AB00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- ADK Workflow -->
+  <rect x="535" y="80" width="95" height="48" rx="6" fill="#E8F5E9" stroke="#34A853" stroke-width="1"/>
+  <text x="582" y="96" text-anchor="middle" font-size="7.5" font-weight="600" fill="#1B5E20">ADK Workflow</text>
+  <text x="582" y="108" text-anchor="middle" font-size="6.5" fill="#2E7D32">Pipeline Graph</text>
+  <text x="582" y="119" text-anchor="middle" font-size="6.5" fill="#2E7D32">ingest→analyze→LLM</text>
+  <line x1="535" y1="104" x2="520" y2="104" stroke="#34A853" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Bottom bar -->
+  <rect x="100" y="310" width="440" height="22" rx="6" fill="#E8F0FE" stroke="#4285F4" stroke-width="0.8"/>
+  <text x="320" y="324" text-anchor="middle" font-size="8" fill="#4285F4">E-Commerce (22) • Banking (22) • CI/CD (24) — Pre-built Scenarios</text>
+
+  <!-- Security + Deploy badges -->
+  <rect x="10" y="310" width="80" height="22" rx="6" fill="#FCE4EC" stroke="#EA4335" stroke-width="0.8"/>
+  <text x="50" y="324" text-anchor="middle" font-size="7" font-weight="600" fill="#B71C1C">Security</text>
+
+  <rect x="550" y="310" width="80" height="22" rx="6" fill="#E8F5E9" stroke="#34A853" stroke-width="0.8"/>
+  <text x="590" y="324" text-anchor="middle" font-size="7" font-weight="600" fill="#1B5E20">Deploy</text>
+
+  <!-- Footer -->
+  <text x="320" y="350" text-anchor="middle" font-size="7" fill="#9AA0A6">Google ADK 2.0 • Python 3.11 • NetworkX • Streamlit • LiteLLM</text>
+</svg>

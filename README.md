@@ -150,9 +150,9 @@ User Query
 
 | Agent | Role | Implementation |
 |-------|------|---------------|
-| **Resilience Engineer** | Plans investigations, chains tools, synthesizes findings | `app/agent.py` — ADK `Agent` with 15 tools |
-| **Insight Generator** | Produces structured risk assessments from simulation data | `app/workflow.py` — ADK `LlmAgent` with `output_schema` |
-| **MCP Interface** | Exposes capabilities to external AI agents | `mcp_server.py` — Model Context Protocol |
+| **Resilience Engineer** | Plans investigations, chains tools, synthesizes findings | `faultline_agent/app/agent.py` — ADK `Agent` with 15 tools |
+| **Insight Generator** | Produces structured risk assessments from simulation data | `faultline_agent/app/workflow.py` — ADK `LlmAgent` with `output_schema` |
+| **MCP Interface** | Exposes capabilities to external AI agents | `faultline_agent/mcp_server.py` — Model Context Protocol |
 
 ### Why ADK Matters
 
@@ -171,11 +171,11 @@ User Query
 
 | Key Concept | Where | Implementation |
 |-------------|-------|---------------|
-| **Agent / Multi-agent (ADK)** | Code | `app/agent.py` (root_agent), `app/workflow.py` (insight_agent), multi-agent pipeline |
-| **MCP Server** | Code | `mcp_server.py` — 6 tools exposed via Model Context Protocol |
-| **Security Features** | Code | `security.py` — input validation, rate limiting, audit logging, API key management |
-| **Deployability** | Code + Video | `Dockerfile`, Cloud Run instructions, `docker-compose` ready |
-| **Agent Skills (Agents CLI)** | Code | Built using `.agent/skills/` — ADK code patterns, workflow design, scaffold conventions |
+| **Agent / Multi-agent (ADK)** | Code | `faultline_agent/app/agent.py` (root_agent), `faultline_agent/app/workflow.py` (insight_agent), multi-agent pipeline |
+| **MCP Server** | Code | `faultline_agent/mcp_server.py` — 6 tools exposed via Model Context Protocol |
+| **Security Features** | Code | `faultline_agent/security.py` — input validation, rate limiting, audit logging, API key management |
+| **Deployability** | Code + Video | `faultline_agent/Dockerfile`, Cloud Run instructions |
+| **Agent Skills (Agents CLI)** | Code | Built using ADK skills — code patterns, workflow design, scaffold conventions |
 
 See [`AGENTS.md`](AGENTS.md) for detailed architecture documentation.
 See [`SETUP_GUIDE.md`](SETUP_GUIDE.md) for judge-friendly setup and deployment instructions.
@@ -193,7 +193,7 @@ See [`SETUP_GUIDE.md`](SETUP_GUIDE.md) for judge-friendly setup and deployment i
 ```bash
 # Clone the repository
 git clone <repo-url>
-cd faultline
+cd Faultline-1/faultline_agent
 
 # Install dependencies
 pip install -r requirements.txt
@@ -286,27 +286,31 @@ The agent autonomously decides which tools to invoke and in what order:
 ## Project Structure
 
 ```
-faultline/
-├── app/                    # ADK 2.0 Agent
-│   ├── agent.py            # root_agent — autonomous resilience engineer
-│   ├── workflow.py         # ADK Workflow pipeline (multi-agent)
-│   ├── tools.py            # 15 composable FunctionTools
-│   ├── schemas.py          # Pydantic I/O schemas
-│   └── runner.py           # Programmatic ADK runner
-├── core/                   # Simulation engine
-│   ├── graph_builder.py    # NetworkX dependency graph
-│   ├── failure_engine.py   # Probabilistic cascade propagation
-│   ├── simulator.py        # Monte Carlo simulation
-│   └── models.py           # Data models
-├── scenarios/              # Pre-built system topologies
-├── ui/                     # Streamlit visualizations
-├── security.py             # Security: validation, rate limiting, audit
-├── mcp_server.py           # MCP server (agent-to-agent)
-├── app.py                  # Streamlit dashboard
-├── cli.py                  # CLI interface
-├── Dockerfile              # Container deployment
+Faultline-1/
+├── README.md               # Main documentation
 ├── AGENTS.md               # Agent architecture documentation
-└── pyproject.toml          # Dependencies
+├── SETUP_GUIDE.md          # Judge-friendly setup instructions
+├── architecture.svg        # Architecture diagram
+└── faultline_agent/        # Application code
+    ├── app/                # ADK 2.0 Agent
+    │   ├── agent.py        # root_agent — autonomous resilience engineer
+    │   ├── workflow.py     # ADK Workflow pipeline (multi-agent)
+    │   ├── tools.py        # 15 composable FunctionTools
+    │   ├── schemas.py      # Pydantic I/O schemas
+    │   └── runner.py       # Programmatic ADK runner
+    ├── core/               # Simulation engine
+    │   ├── graph_builder.py
+    │   ├── failure_engine.py
+    │   ├── simulator.py
+    │   └── models.py
+    ├── scenarios/           # Pre-built system topologies
+    ├── ui/                  # Streamlit visualizations
+    ├── security.py          # Security: validation, rate limiting, audit
+    ├── mcp_server.py        # MCP server (agent-to-agent)
+    ├── app.py               # Streamlit dashboard
+    ├── cli.py               # CLI interface
+    ├── Dockerfile           # Container deployment
+    └── pyproject.toml       # Dependencies
 ```
 
 ---
