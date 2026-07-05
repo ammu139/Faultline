@@ -1,7 +1,7 @@
 # ⚡ FAULTLINE
 
 ### AI-Powered System Resilience/ Fragility Agent
-
+![Faultline Thumbnail](original.png)
 > An autonomous resilience engineer that investigates system architecture, simulates cascading failures, compares failure hypotheses, and recommends cost-effective optimizations — with quantified evidence and confidence.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
